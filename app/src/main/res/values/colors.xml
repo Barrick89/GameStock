@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#795548</color>
+    <color name="colorPrimaryDark">#4E342E</color>
+    <color name="colorAccent">#8D6E63</color>
+
+    <color name="colorPrimaryPc">#9E9E9E</color>
+    <color name="colorPrimaryDarkPc">#424242</color>
+    <color name="colorAccentPc">#BDBDBD</color>
+
+    <color name="colorPrimaryXbox">#8BC34A</color>
+    <color name="colorPrimaryDarkXbox">#558B2F</color>
+    <color name="colorAccentXbox">#9CCC65</color>
+
+    <color name="colorPrimaryPlaystation">#3F51B5</color>
+    <color name="colorPrimaryDarkPlaystation">#283593</color>
+    <color name="colorAccentPlaystation">#5C6BC0</color>
+
+    <color name="colorPrimarySwitch">#F44336</color>
+    <color name="colorPrimaryDarkSwitch">#C62828</color>
+    <color name="colorAccentSwitch">#EF5350</color>
+</resources>

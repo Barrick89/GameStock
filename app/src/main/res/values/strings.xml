@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">GameStock</string>
+    <string name="empty_view_text">Enter new games.</string>
+    <string name="sell_button">Sell</string>
+    <string name="stock_text_view">Stock:</string>
+
+    <string name="pc_activity_title">PC</string>
+    <string name="xbox_activity_title">XBox</string>
+    <string name="playstation_activity_title">Playstation</string>
+    <string name="switch_activity_title">Switch</string>
+
+    <string name="action_delete_all_entries">Delete all</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_order">Order</string>
+    <string name="game_order_subject">New Game Order</string>
+    <string name="game_order">Hello, we need x new copies of </string>
+
+    <string name="delete_dialog_msg">Delete this game?</string>
+    <string name="delete_dialog_msg_2">Delete all games?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_games_successful">Games deleted</string>
+    <string name="delete_games_failed">Error with deleting games</string>
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+
+    <string name="hint_game_name">Title</string>
+    <string name="hint_game_price">0.00</string>
+    <string name="unit_price"> $</string>
+
+    <string name="category_title">Title</string>
+    <string name="category_price">Price</string>
+    <string name="category_stock">Stock</string>
+    <string name="select_image">Select image</string>
+
+    <string name="editor_activity_title_new_game">Add a Game</string>
+    <string name="editor_activity_title_edit_game">Edit Game</string>
+
+    <string name="editor_insert_game_successful">Game saved.</string>
+    <string name="editor_insert_game_failed">Error with saving game.</string>
+    <string name="editor_update_game_successful">Game updated.</string>
+    <string name="editor_update_game_failed">Error with updating game.</string>
+    <string name="editor_delete_game_successful">Game deleted.</string>
+    <string name="editor_delete_game_failed">Error with deleting game.</string>
+    <string name="missing_input">Please add all input.</string>
+
+    <string name="platform_textview">Choose a gaming platform!</string>
+</resources>
