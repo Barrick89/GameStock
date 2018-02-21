@@ -20,6 +20,7 @@ public class ConsoleOverviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_console_overview);
 
+
         GridView grid = (GridView) findViewById(R.id.gridview);
         grid.setAdapter(new LogoAdapter(this));
 
