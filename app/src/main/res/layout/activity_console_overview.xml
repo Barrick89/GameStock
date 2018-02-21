@@ -18,12 +18,12 @@
         android:verticalSpacing="30dp" />
 
     <TextView
-        style="@style/CategoryStyle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
         android:text="@string/platform_textview"
-        android:textSize="20sp" />
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
 
 </LinearLayout>
