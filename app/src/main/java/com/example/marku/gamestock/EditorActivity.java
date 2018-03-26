@@ -468,6 +468,13 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
             if (resultData != null) {
                 imageUri = resultData.getData();
+                final int takeFlags = resultData.getFlags()
+                        & (Intent.FLAG_GRANT_READ_URI_PERMISSION
+                        | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    getContentResolver().takePersistableUriPermission(imageUri, takeFlags);
+                }
                 mImageView.setImageURI(imageUri);
                 mImageView.invalidate();
             }
