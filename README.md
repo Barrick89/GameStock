@@ -11,11 +11,14 @@ To get started simply clone this repository and use the code with Android Studio
 
 
 First the app lets the user choose a console:
-<img src="GameStock_Images/device-2018-04-14-213511.png" width="1080">
+
+<img src="GameStock_Images/device-2018-04-14-213511.png" width="540">
 
 Then a list of games that the user already added is presented. Via the sell button the stock can easily be tracked:
-<img src="GameStock_Images/device-2018-04-14-213229.png" width="1080">
+
+<img src="GameStock_Images/device-2018-04-14-213229.png" width="540">
 
 By pressing on the floating action button the user can add a new game:
-<img src="GameStock_Images/device-2018-04-14-213444.png" width="1080">
+
+<img src="GameStock_Images/device-2018-04-14-213444.png" width="540">
 
