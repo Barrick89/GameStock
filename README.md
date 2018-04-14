@@ -10,7 +10,7 @@ The added games are then shown in a list where you can easily edit and keep trac
 To get started simply clone this repository and use the code with Android Studio.
 
 
-![](GameStock_Images/device-2018-04-14-213511.png width="400" height="790" "First the app lets the user choose a console.")
+![](GameStock_Images/device-2018-04-14-213511.png =250x250 "First the app lets the user choose a console.")
 
 ![](GameStock_Images/device-2018-04-14-213229.png "Then a list of games that the user already added is presented. Via the sell button the stock can easily be tracked.")
 
