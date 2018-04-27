@@ -91,6 +91,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
         int match = sUriMatcher.match(currentUri);
 
+        //Set activity theme regarding of the URI
         switch (match) {
             case PC:
             case PC_ID:
