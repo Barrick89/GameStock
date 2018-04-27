@@ -133,6 +133,7 @@ public class GameCatalogActivity extends AppCompatActivity implements LoaderMana
         return super.onOptionsItemSelected(item);
     }
 
+    //If the Delete All button gets clicked the user has to confirm or cancel in a dialog
     private void showDeleteAllConfirmationDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.delete_dialog_msg_2);
