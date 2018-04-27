@@ -44,6 +44,7 @@ public class GameCatalogActivity extends AppCompatActivity implements LoaderMana
             currentUri = intent.getData();
         }
 
+        //Check the Uri and set the right AppBar title
         if (currentUri.equals(PcEntry.CONTENT_URI)) {
             setTitle(R.string.pc_activity_title);
             setTheme(R.style.PcTheme);
