@@ -227,6 +227,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
     }
 
     private void saveGame() {
+        //Check if all required inputs were made
         if (TextUtils.isEmpty(mNameEditText.getText()) ||
                 TextUtils.isEmpty(mPriceEditText.getText()) ||
                 TextUtils.isEmpty(mCountTextView.getText()) ||
