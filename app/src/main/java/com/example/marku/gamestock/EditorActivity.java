@@ -301,6 +301,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         }
     }
 
+    //If the delete button get clicked the user has to confirm or cancel
     private void showDeleteConfirmationDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.delete_dialog_msg);
