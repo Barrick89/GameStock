@@ -353,6 +353,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         alertDialog.show();
     }
 
+    //If the back button was pressed and changes were made, a dialog asks whether to discard changes
     @Override
     public void onBackPressed() {
         if (!mGameHasChanged) {
