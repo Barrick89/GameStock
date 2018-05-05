@@ -2,6 +2,7 @@ package com.example.marku.gamestock;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
+import android.support.test.espresso.intent.Intents;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -9,10 +10,15 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.intent.Intents.intended;
+import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static org.hamcrest.CoreMatchers.anything;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -39,6 +45,15 @@ public class ExampleInstrumentedTest {
     @Test
     public void checkConsoleViewIsVisible_ConsoleOverviewActivity() {
         onView(withId(R.id.gridview)).check(matches(isDisplayed()));
+    }
+
+    //Test if the GameCatalogActivity is correctly displayed
+    @Test
+    public void checkActivityIsVisible_GameCatalogActivity() {
+        Intents.init();
+        onData(anything()).inAdapterView(withId(R.id.gridview)).atPosition(0).perform(click());
+        intended(hasComponent(GameCatalogActivity.class.getName()));
+        Intents.release();
     }
 
 
