@@ -58,12 +58,22 @@ public class ExampleInstrumentedTest {
         Intents.release();
     }
 
-    //Test if the plus button is working
+    //Test if the plus button in EditorActivity is working
     @Test
     public void checkPlusButton_EditorActivity() {
         onData(anything()).inAdapterView(withId(R.id.gridview)).atPosition(0).perform(click());
         onView(withId(R.id.fab)).perform(click());
         onView(withId(R.id.button_game_count_plus)).perform(click());
+        onView(withId(R.id.edit_game_count)).check(matches(withText(containsString("1"))));
+    }
+
+    //Test if the minus button in EditorActivity is working
+    @Test
+    public void checkMinusButton_EditorActivity() {
+        onData(anything()).inAdapterView(withId(R.id.gridview)).atPosition(0).perform(click());
+        onView(withId(R.id.fab)).perform(click());
+        onView(withId(R.id.button_game_count_plus)).perform(click()).perform(click());
+        onView(withId(R.id.button_game_count_minus)).perform(click());
         onView(withId(R.id.edit_game_count)).check(matches(withText(containsString("1"))));
     }
 
