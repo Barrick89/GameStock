@@ -18,7 +18,9 @@ import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.CoreMatchers.anything;
+import static org.hamcrest.Matchers.containsString;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -54,6 +56,15 @@ public class ExampleInstrumentedTest {
         onData(anything()).inAdapterView(withId(R.id.gridview)).atPosition(0).perform(click());
         intended(hasComponent(GameCatalogActivity.class.getName()));
         Intents.release();
+    }
+
+    //Test if the plus button is working
+    @Test
+    public void checkPlusButton_EditorActivity() {
+        onData(anything()).inAdapterView(withId(R.id.gridview)).atPosition(0).perform(click());
+        onView(withId(R.id.fab)).perform(click());
+        onView(withId(R.id.button_game_count_plus)).perform(click());
+        onView(withId(R.id.edit_game_count)).check(matches(withText(containsString("1"))));
     }
 
 
