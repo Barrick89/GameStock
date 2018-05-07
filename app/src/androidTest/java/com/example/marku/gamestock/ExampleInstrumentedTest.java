@@ -51,10 +51,20 @@ public class ExampleInstrumentedTest {
 
     //Test if the GameCatalogActivity is correctly displayed
     @Test
-    public void checkActivityIsVisible_GameCatalogActivity() {
+    public void checkGameCatalogActivityIsVisible_GameCatalogActivity() {
         Intents.init();
         onData(anything()).inAdapterView(withId(R.id.gridview)).atPosition(0).perform(click());
         intended(hasComponent(GameCatalogActivity.class.getName()));
+        Intents.release();
+    }
+
+    //Test if the EditorActivity is correctly displayed
+    @Test
+    public void checkEditorActivityIsVisible_EditorActivity() {
+        Intents.init();
+        onData(anything()).inAdapterView(withId(R.id.gridview)).atPosition(0).perform(click());
+        onView(withId(R.id.fab)).perform(click());
+        intended(hasComponent(EditorActivity.class.getName()));
         Intents.release();
     }
 
