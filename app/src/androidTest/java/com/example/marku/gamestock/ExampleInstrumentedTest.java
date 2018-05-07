@@ -1,11 +1,16 @@
 package com.example.marku.gamestock;
 
 import android.content.Context;
+import android.os.IBinder;
 import android.support.test.InstrumentationRegistry;
+import android.support.test.espresso.Root;
 import android.support.test.espresso.intent.Intents;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import android.view.WindowManager;
 
+import org.hamcrest.Description;
+import org.hamcrest.TypeSafeMatcher;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -87,5 +92,33 @@ public class ExampleInstrumentedTest {
         onView(withId(R.id.edit_game_count)).check(matches(withText(containsString("1"))));
     }
 
+    //Test if the missing input Toast in EditorActivity is displayed correctly
+    @Test
+    public void checkToast_EditorActivity() {
+        onData(anything()).inAdapterView(withId(R.id.gridview)).atPosition(0).perform(click());
+        onView(withId(R.id.fab)).perform(click());
+        onView(withId(R.id.action_save)).perform(click()).perform(click());
+        onView(withText(R.string.missing_input)).inRoot(new ToastMatcher())
+                .check(matches(isDisplayed()));
+    }
 
+    public class ToastMatcher extends TypeSafeMatcher<Root> {
+        @Override
+        public void describeTo(Description description) {
+            description.appendText("is toast");
+        }
+
+        @Override
+        public boolean matchesSafely(Root root) {
+            int type = root.getWindowLayoutParams().get().type;
+            if ((type == WindowManager.LayoutParams.TYPE_TOAST)) {
+                IBinder windowToken = root.getDecorView().getWindowToken();
+                IBinder appToken = root.getDecorView().getApplicationWindowToken();
+                if (windowToken == appToken) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
 }
