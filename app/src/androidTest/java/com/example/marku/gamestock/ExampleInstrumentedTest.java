@@ -97,7 +97,7 @@ public class ExampleInstrumentedTest {
     public void checkToast_EditorActivity() {
         onData(anything()).inAdapterView(withId(R.id.gridview)).atPosition(0).perform(click());
         onView(withId(R.id.fab)).perform(click());
-        onView(withId(R.id.action_save)).perform(click()).perform(click());
+        onView(withId(R.id.action_save)).perform(click());
         onView(withText(R.string.missing_input)).inRoot(new ToastMatcher())
                 .check(matches(isDisplayed()));
     }
